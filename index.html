@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="newBook" onclick="openForm()">NEW BOOK</button>
+    <div class="form-popup" id="form">
+        <form action="#" class="form-container">
+            <h1>Fill out the information below!</h1>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Enter Author Name" name="author">
+
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Book Title" name="title">
+
+            <label for="pages"><b>Number of Pages</b></label>
+            <input type="number" step="1" min="1" placeholder="123" name="pages">
+
+            <b>Read?</b>
+            <label for="yes"><span>Yes</span></label>
+            <input type="radio" id="yes" name="yes" value="yes">
+
+            <label for="no"><span>No</span></label>
+            <input type="radio" id="no" name="no" value="no">
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="close" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
