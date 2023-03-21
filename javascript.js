@@ -1,29 +1,38 @@
-let myLibrary= ['cat', 'dog', 'bunny'];
+let myLibrary= [
+    {title:'Holes', author:'Louis Sachar', pages:272, read: 'Yes'}
+];
 
-function Book(author, title, pages, read) {
-    this.author = author;
+function Book(title, author, pages, read) {
     this.title = title;
+    this.author = author;
     this.pages = pages;
     this.read = read;
-    this.info = function () {
-        return [author, title, pages, read]
-    }
-    addBookToLibrary(this.info);
 }
 
 function addBookToLibrary() {
-    myLibrary.push(this.info);
+    let newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
 }
 
 function displayBook() {
     for (let i = 0; i < myLibrary.length; i++) {
-        let div = document.createElement('div');
-        div.classList.add('container');
-        div.innerHTML = myLibrary[i];
-        document.body.appendChild(div);
+        let info = myLibrary[i];
+
+        let row = document.createElement('tr');
+        row.classList.add('container'); 
+        table = document.getElementById('table');
+        table.appendChild(row);
+
+        for (const key in info) {
+            td = document.createElement('td');
+            td.innerText = info[key]
+            row.appendChild(td);
+        }
     }
 }
 
+
+displayBook();
 function openForm() {
     document.getElementById('form').style.display = 'block';
 }
@@ -31,3 +40,10 @@ function openForm() {
 function closeForm() {
     document.getElementById('form').style.display = 'none';
 }
+
+const form = document.querySelector('[name="form]');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    return 
+})
