@@ -11,27 +11,32 @@
 <body>
     <button class="newBook" onclick="openForm()">NEW BOOK</button>
     <table id="table">
-
+        <tr id = "tableHead">
+            <th>Author</th>
+            <th>Title</th>
+            <th>Number of Pages</th>
+            <th>Read?</th>
+        </tr>
     </table>
-    <div class="form-popup" id="form">
-        <form action="#" name="form">
+    <div class="form-popup" id="popup">
+        <form action="#" name="form" id="form">
             <h2>Fill out the information below!</h2>
 
-            <label for="author"><b>Author</b></label>
-            <input type="text" placeholder="Enter Author Name" name="author">
-
             <label for="title"><b>Title</b></label>
-            <input type="text" placeholder="Enter Book Title" name="title">
+            <input type="text" placeholder="Enter Book Title" name="title" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Enter Author Name" name="author" required>
 
             <label for="pages"><b>Number of Pages</b></label>
-            <input type="number" step="1" min="1" placeholder="123" name="pages">
+            <input type="number" step="1" min="1" placeholder="123" name="pages" required>
 
             <b>Read?</b>
             <label for="yes"><span>Yes</span></label>
-            <input type="radio" id="yes" name="yes" value="yes">
+            <input type="radio" id="yes" name="option" value="yes">
 
             <label for="no"><span>No</span></label>
-            <input type="radio" id="no" name="no" value="no">
+            <input type="radio" id="no" name="option" value="no">
 
             <button type="submit" class="btn">Submit</button>
             <button type="button" class="close" onclick="closeForm()">Cancel</button>
