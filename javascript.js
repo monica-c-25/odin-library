@@ -90,7 +90,6 @@ function clearForm() {
 
 function removeBook() {
     let i = this.parentNode.parentNode.rowIndex;
-    console.log(i);
     document.getElementById('table').deleteRow(i)
 }
 

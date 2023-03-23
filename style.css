@@ -1,3 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #085f63;
+}
+
+h1 {
+    font-size: xx-large;
+    color: white;
+    font-size: max(60px);
+    margin-top: max(20px);
+    margin-bottom: max(20px);
+}
+
+#newBook {
+    border-radius: 10px;
+    height: max(30px);
+    width: max(100px);
+    background-color:  #f7cdbe;
+    color: rgb(103, 76, 80);
+}
+
+#table {
+    margin-top: 5%;
+    width: 85vw;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: max(20px);
+}
+
+#table > tr {
+    height: min(5px);
+    color: rgb(103, 76, 80);
+    padding: max(3px);
+}
+
+th {
+    height: max(35px);
+    width: 16.66%;
+    padding: max(3px);
+}
+
+td {
+    height: max(30px);
+    padding: max(3px);
+}
+
+
+th:first-of-type {
+    border-top-left-radius: 10px;
+  }
+  th:last-of-type {
+    border-top-right-radius: 10px;
+  }
+  tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+  }
+  tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+  }
+
+
+#tableHead {
+    background-color: #f5e1da;
+    color:rgb(103, 76, 80);
+}
+
+
 .form-popup {
     display: none;
+    background-color: #f1f1f1;
+    color: rgb(103, 76, 80);
+    width:30vw;
+    height:65vh;
+    margin-top: 5%;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: max(15px);
+    padding:5%;
+}
+
+#change, #remove {
+    border-radius: 10px;
+    background-color: #f5e1da;
+    color: rgb(103, 76, 80);
+    padding: max(8px);
+    padding-top: max(3px);
+    padding-bottom: max(3px);
+}
+
+h2 {
+    margin-top: max(5px);
+    margin-bottom: max(5px);
+}
+
+input[type="text"] {
+    margin-bottom: 3px;
+}
+
+.btns {
+    display: flex;
+    gap: max(5px);
+    margin-top:10%;
+}
+
+.btn, #close {
+    width: 50%;
+    color: rgb(103, 76, 80);
+}
+
+.radio {
+    display: flex;
+    gap:max(5px);
 }
